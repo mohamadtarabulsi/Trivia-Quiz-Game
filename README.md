@@ -15,6 +15,8 @@ Presents a total of 10 trivia questions to the user, along with their respective
 Accepts user input for each question and evaluates the correctness of the response.
 Provides feedback on whether the answer is correct or incorrect, and displays the correct answer if the user's response is incorrect.
 Keeps track of the total score throughout the quiz and displays the final score at the end of the game.
+
+
 Technologies Used:
 
 Java: The primary programming language used to develop the application.
