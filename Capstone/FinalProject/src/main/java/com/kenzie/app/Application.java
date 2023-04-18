@@ -20,6 +20,10 @@ public class Application {
 
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean playAgain = true;
+
+        while (playAgain) {
         //Write main execution code here
         // define API URL
         String URL = "https://jservice.kenzie.academy/api/clues";
@@ -41,7 +45,6 @@ public class Application {
         // Initialize score and total questions
         int score = 0;
         int totalQuestions = 10;
-        Scanner scanner = new Scanner(System.in);
 
         // Loop through the number of questions
         for (int i = 0; i < totalQuestions; i++) {
@@ -65,8 +68,15 @@ public class Application {
             System.out.println("Current Score: " + score);
         }
         // Display final score
-        System.out.println("Game over! Your final score is: " + score);
+            System.out.println("Game over! Your final score is: " + score);
+            System.out.println("Would you like to play again? (y/n)");
+            String input = scanner.nextLine().toLowerCase();
+            if (!input.equals("y")) {
+                playAgain = false;
+            }
+        }
         scanner.close();
+        System.out.println("Thanks for playing!");
     }
     // Method to parse clues from JSOn response
     private static List<Clue> parseClues(String responseBody) {
